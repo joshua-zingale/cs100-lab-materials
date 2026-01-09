@@ -10,7 +10,9 @@ for dir in */; do
     if [[ -f "$input_file" ]]; then
         echo "Processing: $filename/$slide_file_name"
         
-        pandoc -t beamer -s "$input_file" -o "$filename.pdf"
+        pandoc -t beamer -s "$input_file" \
+		-o "$filename.pdf" \
+	--metadata date="`date "+%B %-d, %Y"`"
         
         if [[ $? -eq 0 ]]; then
             echo "Success: Created $filename.pdf"
