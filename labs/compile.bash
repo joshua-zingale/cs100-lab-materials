@@ -1,23 +1,25 @@
 
 for dir in */; do
     
-    filename=${dir%/}
+    foldername=${dir%/}
 
     slide_file_name="slides.md"
     
-    input_file="$filename/$slide_file_name"
+    input_file="$foldername/$slide_file_name"
     
     if [[ -f "$input_file" ]]; then
-        echo "Processing: $filename/$slide_file_name"
+        echo "Processing: $foldername/$slide_file_name"
+
         
         pandoc -t beamer -s "$input_file" \
-		-o "$filename.pdf" \
-	--metadata date="`date "+%B %-d, %Y"`"
+		-o "$foldername.pdf" \
+	    --metadata date="`date "+%B %-d, %Y"`" \
+        --resource-path $foldername
         
         if [[ $? -eq 0 ]]; then
-            echo "Success: Created $filename.pdf"
+            echo "Success: Created $foldername.pdf"
         else
-            echo "Error: Pandoc failed in $filename/$slide_file_name"
+            echo "Error: Pandoc failed in $foldername/$slide_file_name"
         fi
         echo "-----------------------------------"
     fi
