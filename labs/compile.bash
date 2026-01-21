@@ -1,5 +1,5 @@
-
-for dir in */; do
+directories=${1:-*/}
+for dir in $directories; do
     
     foldername=${dir%/}
 
@@ -14,6 +14,7 @@ for dir in */; do
         pandoc -t beamer -s "$input_file" \
 		-o "$foldername.pdf" \
 	    --metadata date="`date "+%B %-d, %Y"`" \
+        -V theme:Warsaw \
         --resource-path $foldername
         
         if [[ $? -eq 0 ]]; then
