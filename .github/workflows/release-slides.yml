@@ -1,0 +1,32 @@
+name: Compile and Release Labs
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggers on tags starting with v (e.g., v1.0)
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+
+      - name: Run compile script
+        run: |
+          cd labs
+          chmod +x compile.bash
+          ./compile.bash
+        shell: bash
+
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: labs/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
