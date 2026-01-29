@@ -1,9 +1,15 @@
-name: Compile and Release Labs
+name: Compile and Release Lab Slides
 
 on:
-  push:
-    tags:
-      - 'v*' # Triggers on tags starting with v (e.g., v1.0)
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name for the release (e.g., v1.0.5)'
+        required: true
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
 
 jobs:
   build-and-release:
@@ -27,6 +33,7 @@ jobs:
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.event.inputs.tag_name }} 
           files: labs/*.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
