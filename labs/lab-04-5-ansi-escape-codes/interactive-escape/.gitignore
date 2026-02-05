@@ -2,5 +2,5 @@ ansi-demo
 cmake_install.cmake
 CMakeCache.txt
 CMakeFiles/
-interactive-ansi
+interactive-escape
 Makefile
