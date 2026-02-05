@@ -23,9 +23,9 @@ author: Joshua Zingale
 
 :::
 
-/tiny
+\tiny
 source: [https://en.wikipedia.org/wiki/Computer_terminal](https://en.wikipedia.org/wiki/Computer_terminal)
-/normalsize
+\normalsize
 
 
 # What Is a Terminal Emulator?
