@@ -73,7 +73,7 @@ Even today, years after physical terminals' heyday, the same escape code are use
 
 # Demonstration 
 
-Available for download on GitHub^[[https://github.com/joshua-zingale/cs100-lab-materials/tree/master/labs/lab-04-5-ansi-escape-codes/interactive-ansi](https://github.com/joshua-zingale/cs100-lab-materials/tree/master/labs/lab-04-5-ansi-escape-codes/interactive-ansi)]
+Available for download on GitHub^[[https://github.com/joshua-zingale/ansi-escape](https://github.com/joshua-zingale/ansi-escape)]
 
 ## Interactive Escape Code Entry
 
