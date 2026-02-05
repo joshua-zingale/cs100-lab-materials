@@ -1,5 +1,5 @@
 #include<iostream>
-#include<format>
+#include<sstream>
 #include<string>
 #include <cctype>
 
@@ -26,7 +26,9 @@ std::ostream& load(std::ostream &os) {
 }
 
 std::string moveCursor(int line, int column) {
-    return std::format("\x1b[{};{}H", line, column);
+    std::stringstream ss;
+    ss << "\x1b[" << line << ';' << column << 'H';
+    return ss.str();
 }
 
 std::string unescape(std::string& input) {
