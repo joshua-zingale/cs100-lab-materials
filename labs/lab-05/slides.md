@@ -71,6 +71,8 @@ Pushing to GitHub every time you modify your workflow is not the best way to tes
 - `act push` will run all workflows that are activated on a push.
 - `act -j JOB-NAME` will run a specific workflow job by name.
 
+## Example
+
 ```bash
 act -j tests-passing
 ```
