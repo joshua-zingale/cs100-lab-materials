@@ -19,7 +19,7 @@ A workflow can
 
 - GitHub looks inside each repository's `.github/workflows/` folder for YAML files.
 - Each YAML file defines one workflow.
-- If a workflow is trigger (e.g. by a pull request), GitHub spins up a container that runs code specified in the workflow's YAML file.
+- If a workflow is triggered (e.g. by a pull request), GitHub spins up a container that runs code specified in the workflow's YAML file.
 - The workflow succeeds iff no process run in the workflow returns a non-zero error status.
 
 # Automated Testing
