@@ -28,6 +28,19 @@ source: [https://en.wikipedia.org/wiki/Computer_terminal](https://en.wikipedia.o
 \normalsize
 
 
+# Escape Codes
+
+Since terminals had very basic display abilities, often purely character based,
+they accepted **escape codes** to modify the visual output of the terminal.
+
+For example, the following hex values on DEC terminals had special meaning:
+
+- **0x07** --- *\\a* --- make a bell sound
+- **0x0A** --- *\\n* --- linefeed, i.e. advance to the next line
+- **0x1B** --- *\\e* --- *ESC*, used to introduce longer escape sequences
+- &c
+
+
 # What Is a Terminal Emulator?
 
 
@@ -49,19 +62,6 @@ source: [https://en.wikipedia.org/wiki/Terminal_emulator](https://en.wikipedia.o
 ::::
 
 :::
-
-# Escape Codes
-
-Since terminals had very basic display abilities, often purely character based,
-they accepted **escape codes** to modify the visual output of the terminal.
-
-For example, the following hex values on DEC terminals had special meaning:
-
-- **0x07** --- *\\a* --- make a bell sound
-- **0x0A** --- *\\n* --- linefeed, i.e. advance to the next line
-- **0x1B** --- *\\e* --- *ESC*, used to introduce longer escape sequences
-- &c
-
 
 
 # Using Escape Codes
