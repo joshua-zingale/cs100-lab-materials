@@ -134,5 +134,5 @@ genhtml build/coverage.info \
 1. Compile SUT^[**S**ystem **U**nder **T**est] with coverage tracking;
 2. Link tests with SUT;
 3. Run tests;
-4. Inspect coverage with Gcov/Lcov readouts
+4. Inspect coverage with Gcov/Lcov readouts;
 5. If portions of the SUT's source code are not covered, add tests.
