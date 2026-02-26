@@ -124,7 +124,7 @@ genhtml build/coverage.info \
 ```
 \normalsize
 
-# HTMLGen Output
+# GenHTML Output
 
 ![Lcov HTML viewed in a web browser](images/lcov-html.png)
 
